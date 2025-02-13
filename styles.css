@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9e3e3;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #d32f2f;
+    margin-top: 20px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.buttons {
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.yes-button, .no-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.yes-button {
+    background-color: #4caf50;
+    color: white;
+    margin-right: 10px;
+}
+
+.no-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.gif_container img {
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.side-images {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#right-image {
+    display: none; /* Hide the right image */
+}
+
+.side-images img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+    z-index: 5;
+}
+
+.fullscreen-gif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    max-width: 500px;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    background: transparent;
+}
+
+/* Mobile View Fix */
+@media screen and (max-width: 768px) {
+    .fullscreen-gif {
+        width: 80vw;
+        max-width: 300px;
+        max-height: 50vh;
+    }
+    
+    .container h1 {
+        font-size: 2em;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .yes-button, .no-button {
+        font-size: 1.2em;
+        padding: 8px 15px;
+    }
+
+    .gif_container img {
+        max-height: 200px;
+    }
+}
